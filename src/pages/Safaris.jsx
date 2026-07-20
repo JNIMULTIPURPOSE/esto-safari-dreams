@@ -71,11 +71,11 @@ function Safaris() {
               Explore Africa
             </p>
 
-            <h1 className="mt-6 text-5xl md:text-7xl font-bold text-white leading-tight">
+            <h1 className="mt-6 text-4xl sm:text-5xl md:text-7xl font-bold text-white leading-tight">
               Luxury Safari Packages
             </h1>
 
-            <p className="mt-8 text-xl text-gray-200 leading-9 max-w-3xl mx-auto">
+            <p className="mt-6 text-base sm:text-lg md:text-xl text-gray-200 leading-7 md:leading-9 max-w-3xl mx-auto">
               Carefully crafted safari experiences designed to match every
               travel style—from luxury escapes to unforgettable family
               adventures.
@@ -104,11 +104,11 @@ function Safaris() {
             Our Collection
           </p>
 
-          <h2 className="mt-6 text-5xl md:text-6xl font-bold text-white leading-tight">
+          <h2 className="mt-6 text-3xl sm:text-4xl md:text-6xl font-bold text-white leading-tight">
             Choose Your Perfect Safari
           </h2>
 
-          <p className="mt-8 text-xl text-gray-300 leading-9 max-w-3xl mx-auto">
+          <p className="mt-6 text-base sm:text-lg md:text-xl text-gray-300 leading-7 md:leading-9 max-w-3xl mx-auto">
             Every safari is thoughtfully crafted to deliver breathtaking wildlife,
             luxury accommodation and unforgettable African adventures.
           </p>
@@ -119,7 +119,7 @@ function Safaris() {
 
       {/* Cards */}
 
-      <div className="mt-20 flex flex-wrap justify-center items-center gap-10">
+      <div className="mt-20 flex flex-wrap justify-center items-stretch gap-8">
 
   {packages.map((item, index) => (
 
@@ -137,15 +137,17 @@ function Safaris() {
         scale: 1.02,
       }}
       className="
-        group
-        relative
-        flex-none
-        w-[390px]
-        h-[520px]
-        overflow-hidden
-        rounded-[2rem]
-        shadow-2xl
-      "
+  group
+  relative
+  w-full
+  sm:w-[390px]
+  max-w-[390px]
+  h-[500px]
+  sm:h-[520px]
+  overflow-hidden
+  rounded-[2rem]
+  shadow-2xl
+"
     >
 
       <img

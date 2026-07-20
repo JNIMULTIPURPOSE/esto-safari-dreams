@@ -9,23 +9,23 @@ import {
 
 function Footer() {
   return (
-    <footer className="bg-[#081C15] text-white pt-24 pb-10 overflow-hidden">
+    <footer className="bg-[#081C15] text-white pt-16 md:pt-24 pb-10 overflow-hidden">
 
-      <div className="w-full flex justify-center px-6">
+      <div className="w-full flex justify-center px-5 md:px-6">
 
         <div className="w-full max-w-7xl">
 
-          <div className="grid gap-16 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-12 md:gap-16 md:grid-cols-2 lg:grid-cols-4 text-center md:text-left">
 
             {/* Brand */}
 
             <div>
 
-              <h2 className="text-3xl font-bold text-[#C9A227]">
+              <h2 className="text-2xl md:text-3xl font-bold text-[#C9A227]">
                 Esto Safari Dreams
               </h2>
 
-              <p className="mt-6 text-gray-300 leading-8">
+              <p className="mt-5 text-gray-300 leading-8">
                 Creating unforgettable luxury safari experiences across
                 East Africa with personalized journeys, expert guides,
                 and memories that last a lifetime.
@@ -43,53 +43,21 @@ function Footer() {
 
               <ul className="space-y-4 text-gray-300">
 
-                <li>
-                  <Link to="/" className="hover:text-[#C9A227] transition">
-                    Home
-                  </Link>
-                </li>
+                <li><Link to="/" className="hover:text-[#C9A227] transition">Home</Link></li>
 
-                <li>
-                  <Link to="/about" className="hover:text-[#C9A227] transition">
-                    About
-                  </Link>
-                </li>
+                <li><Link to="/about" className="hover:text-[#C9A227] transition">About</Link></li>
 
-                <li>
-                  <Link to="/safaris" className="hover:text-[#C9A227] transition">
-                    Safaris
-                  </Link>
-                </li>
+                <li><Link to="/safaris" className="hover:text-[#C9A227] transition">Safaris</Link></li>
 
-                <li>
-                  <Link to="/destinations" className="hover:text-[#C9A227] transition">
-                    Destinations
-                  </Link>
-                </li>
+                <li><Link to="/destinations" className="hover:text-[#C9A227] transition">Destinations</Link></li>
 
-                <li>
-                  <Link to="/fleet" className="hover:text-[#C9A227] transition">
-                    Fleet
-                  </Link>
-                </li>
+                <li><Link to="/fleet" className="hover:text-[#C9A227] transition">Fleet</Link></li>
 
-                <li>
-                  <Link to="/gallery" className="hover:text-[#C9A227] transition">
-                    Gallery
-                  </Link>
-                </li>
+                <li><Link to="/gallery" className="hover:text-[#C9A227] transition">Gallery</Link></li>
 
-                <li>
-                  <Link to="/booking" className="hover:text-[#C9A227] transition">
-                    Booking
-                  </Link>
-                </li>
+                <li><Link to="/booking" className="hover:text-[#C9A227] transition">Booking</Link></li>
 
-                <li>
-                  <Link to="/contact" className="hover:text-[#C9A227] transition">
-                    Contact
-                  </Link>
-                </li>
+                <li><Link to="/contact" className="hover:text-[#C9A227] transition">Contact</Link></li>
 
               </ul>
 
@@ -105,7 +73,7 @@ function Footer() {
 
               <div className="space-y-5 text-gray-300">
 
-                <div className="flex items-center gap-3">
+                <div className="flex items-center justify-center md:justify-start gap-3">
                   <FaWhatsapp className="text-[#C9A227]" />
                   <a
                     href="https://wa.me/254113966230"
@@ -117,17 +85,17 @@ function Footer() {
                   </a>
                 </div>
 
-                <div className="flex items-center gap-3">
+                <div className="flex items-center justify-center md:justify-start gap-3">
                   <FaEnvelope className="text-[#C9A227]" />
                   <a
                     href="mailto:info@estosafaridreams.com"
-                    className="hover:text-[#C9A227] transition"
+                    className="hover:text-[#C9A227] transition break-all"
                   >
                     info@estosafaridreams.com
                   </a>
                 </div>
 
-                <div className="flex items-center gap-3">
+                <div className="flex items-center justify-center md:justify-start gap-3">
                   <FaMapMarkerAlt className="text-[#C9A227]" />
                   <span>Kenya, East Africa</span>
                 </div>
@@ -148,59 +116,73 @@ function Footer() {
                 Stay inspired with our latest safari adventures and travel stories.
               </p>
 
-              <div className="flex gap-4">
+              <div className="flex justify-center md:justify-start gap-4 flex-wrap">
 
                 <a
-  href="https://www.facebook.com/profile.php?id=61588791099957"
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label="Facebook"
-  className="
-    w-12
-    h-12
-    rounded-full
-    bg-white/10
-    flex
-    items-center
-    justify-center
-    hover:bg-[#C9A227]
-    hover:text-black
-    transition-all
-    duration-300
-    hover:scale-110
-  "
->
-  <FaFacebookF />
-</a>
+                  href="https://www.facebook.com/profile.php?id=61588791099957"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                  className="
+                    w-12
+                    h-12
+                    rounded-full
+                    bg-white/10
+                    flex
+                    items-center
+                    justify-center
+                    hover:bg-[#C9A227]
+                    hover:text-black
+                    transition-all
+                    duration-300
+                    hover:scale-110
+                  "
+                >
+                  <FaFacebookF />
+                </a>
 
                 <a
-  href="https://instagram.com/estosafaridreams"
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label="Instagram"
-  className="
-    w-12
-    h-12
-    rounded-full
-    bg-white/10
-    flex
-    items-center
-    justify-center
-    hover:bg-[#C9A227]
-    hover:text-black
-    transition-all
-    duration-300
-    hover:scale-110
-  "
->
-  <FaInstagram />
-</a>
+                  href="https://instagram.com/estosafaridreams"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="
+                    w-12
+                    h-12
+                    rounded-full
+                    bg-white/10
+                    flex
+                    items-center
+                    justify-center
+                    hover:bg-[#C9A227]
+                    hover:text-black
+                    transition-all
+                    duration-300
+                    hover:scale-110
+                  "
+                >
+                  <FaInstagram />
+                </a>
 
                 <a
                   href="https://wa.me/254113966230"
                   target="_blank"
                   rel="noreferrer"
-                  className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#C9A227] hover:text-black transition"
+                  aria-label="WhatsApp"
+                  className="
+                    w-12
+                    h-12
+                    rounded-full
+                    bg-white/10
+                    flex
+                    items-center
+                    justify-center
+                    hover:bg-[#C9A227]
+                    hover:text-black
+                    transition-all
+                    duration-300
+                    hover:scale-110
+                  "
                 >
                   <FaWhatsapp />
                 </a>
@@ -211,7 +193,7 @@ function Footer() {
 
           </div>
 
-          <div className="border-t border-white/10 mt-16 pt-8 text-center text-gray-400">
+          <div className="border-t border-white/10 mt-12 md:mt-16 pt-8 text-center text-gray-400 text-sm">
 
             © {new Date().getFullYear()} Esto Safari Dreams. All Rights Reserved.
 

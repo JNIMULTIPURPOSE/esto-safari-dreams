@@ -10,23 +10,23 @@ function Home() {
     <>
       <Hero />
 
-      <div className="mt-32">
+      <div className="mt-16 sm:mt-20 md:mt-24 lg:mt-32">
         <WhyChoose />
       </div>
 
-      <div className="mt-32">
+      <div className="mt-16 sm:mt-20 md:mt-24 lg:mt-32">
         <SafariPackages />
       </div>
 
-      <div className="mt-32">
+      <div className="mt-16 sm:mt-20 md:mt-24 lg:mt-32">
         <Testimonials />
       </div>
 
-      <div className="mt-32">
+      <div className="mt-16 sm:mt-20 md:mt-24 lg:mt-32">
         <GalleryPreview />
       </div>
 
-      <div className="mt-32">
+      <div className="mt-16 sm:mt-20 md:mt-24 lg:mt-32">
         <CTA />
       </div>
     </>

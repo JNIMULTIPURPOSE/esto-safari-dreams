@@ -11,7 +11,7 @@ function Contact() {
       <section
         className="
         relative
-        h-[65vh]
+        h-[55vh] md:h-[65vh]
         flex
         items-center
         justify-center
@@ -65,8 +65,9 @@ function Contact() {
 
           <h1 className="
           mt-6
-          text-5xl
-          md:text-7xl
+          text-3xl
+sm:text-4xl
+md:text-7xl
           font-bold
           leading-tight
           ">
@@ -76,11 +77,13 @@ function Contact() {
 
           <p className="
           mt-8
-          text-xl
           text-gray-200
           max-w-3xl
           mx-auto
-          leading-9
+          text-base
+sm:text-lg
+leading-7
+sm:leading-9
           ">
             Let us help you plan a once-in-a-lifetime African adventure.
           </p>
@@ -98,8 +101,8 @@ function Contact() {
 
       <section className="
       bg-[#050505]
-      py-32
-      px-6
+      py-20 md:py-32
+px-5 sm:px-6
       text-white
       ">
 
@@ -112,8 +115,10 @@ function Contact() {
 
           <div className="
           grid
-          lg:grid-cols-2
-          gap-12
+grid-cols-1
+lg:grid-cols-2
+gap-10
+lg:gap-12
           items-center
           ">
 
@@ -155,7 +160,9 @@ function Contact() {
 
               <h2 className="
               mt-6
-              text-5xl
+              text-3xl
+sm:text-4xl
+md:text-5xl
               font-bold
               leading-tight
               ">
@@ -166,8 +173,10 @@ function Contact() {
               <p className="
               mt-8
               text-gray-300
-              text-lg
-              leading-8
+              text-base
+sm:text-lg
+leading-7
+sm:leading-8
               ">
                 Whether you need a luxury safari, family adventure,
                 honeymoon escape or custom itinerary, our team is ready
@@ -209,7 +218,9 @@ function Contact() {
             border
             border-white/20
             rounded-[2rem]
-            p-10
+            p-6
+sm:p-8
+md:p-10
             text-center
             shadow-2xl
             "
@@ -218,7 +229,8 @@ function Contact() {
 
 
               <h3 className="
-              text-3xl
+              text-2xl
+md:text-3xl
               font-bold
               ">
                 Esto Safari Dreams Ltd
@@ -228,16 +240,20 @@ function Contact() {
 
               <div className="
               mt-8
-              space-y-6
+              space-y-5
               text-gray-200
               ">
 
 
                 <p className="
                 flex
-                items-center
-                justify-center
-                gap-4
+flex-wrap
+items-center
+justify-center
+gap-3
+text-sm
+sm:text-base
+break-all
                 ">
                   <FaMapMarkerAlt className="text-[#C9A227]" />
                   Kenya, East Africa
@@ -247,9 +263,13 @@ function Contact() {
 
                 <p className="
                 flex
-                items-center
-                justify-center
-                gap-4
+flex-wrap
+items-center
+justify-center
+gap-3
+text-sm
+sm:text-base
+break-all
                 ">
                   <FaWhatsapp className="text-[#C9A227]" />
                   WhatsApp: +254 113966230
@@ -259,9 +279,13 @@ function Contact() {
 
                 <p className="
                 flex
-                items-center
-                justify-center
-                gap-4
+flex-wrap
+items-center
+justify-center
+gap-3
+text-sm
+sm:text-base
+break-all
                 ">
                   <FaEnvelope className="text-[#C9A227]" />
                   info@estosafaridreams.com
@@ -285,7 +309,10 @@ function Contact() {
               mt-10
               bg-[#C9A227]
               text-black
-              px-10
+              w-full
+sm:w-auto
+px-8
+py-4
               py-4
               rounded-full
               font-bold

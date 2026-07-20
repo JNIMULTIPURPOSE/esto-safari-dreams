@@ -67,7 +67,7 @@ ${hotel.requests}`;
 };
   const inputStyle = `
     w-full
-    h-16
+    h-14 md:h-16
     bg-black/30
     border
     border-white/20
@@ -107,7 +107,7 @@ ${hotel.requests}`;
 <section
   className="
     relative
-    h-[45vh]
+    h-[50vh] md:h-[45vh]
     flex
     items-center
     justify-center
@@ -151,8 +151,9 @@ ${hotel.requests}`;
 
 
     <h1 className="
-      text-5xl
-      md:text-6xl
+      text-2xl md:text-3xl
+sm:text-4xl
+md:text-6xl
       font-bold
       mt-6
       text-white
@@ -164,8 +165,10 @@ ${hotel.requests}`;
     <p className="
       mt-6
       text-gray-200
-      text-lg
-      leading-8
+      text-base
+sm:text-lg
+leading-7
+sm:leading-8
     ">
       Share your travel dreams and our safari experts will design
       an unforgettable African experience around you.
@@ -181,7 +184,7 @@ ${hotel.requests}`;
 
         {/* FORMS */}
 
-        <div className="grid lg:grid-cols-2 gap-14">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-14">
 
 
 
@@ -195,14 +198,15 @@ ${hotel.requests}`;
               border
               border-white/20
               rounded-2xl
-              p-8
-              md:p-12
+              p-6
+sm:p-8
+md:p-12
               shadow-2xl
             "
           >
 
 
-            <h2 className="text-3xl font-bold mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold mb-10">
               Safari Booking
             </h2>
 
@@ -295,7 +299,7 @@ ${hotel.requests}`;
   onClick={handleSafariBooking}
   className="
     w-full
-    h-16
+    h-14 md:h-16
     bg-[#C9A227]
     text-black
     rounded-xl
@@ -338,7 +342,7 @@ ${hotel.requests}`;
 
             <h2
               className="
-                text-3xl
+                text-2xl md:text-3xl
                 font-bold
                 mb-10
                 flex
@@ -429,7 +433,7 @@ ${hotel.requests}`;
   onClick={handleHotelBooking}
   className="
     w-full
-    h-16
+    h-14 md:h-16
     border-2
     border-[#C9A227]
     text-[#C9A227]
@@ -461,7 +465,7 @@ ${hotel.requests}`;
         {/* FEATURES */}
 
 
-        <div className="mt-20 grid md:grid-cols-4 gap-6">
+        <div className="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
 
 
           {[
@@ -479,7 +483,7 @@ ${hotel.requests}`;
                 border
                 border-white/20
                 rounded-xl
-                p-7
+                p-4 md:p-7
                 text-center
               "
             >
@@ -490,7 +494,7 @@ ${hotel.requests}`;
               </p>
 
 
-              <p className="mt-3 text-gray-300">
+              <p className="mt-2 text-sm md:text-base text-gray-300">
                 {item}
               </p>
 

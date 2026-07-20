@@ -30,121 +30,126 @@ function Testimonials() {
   ];
 
   return (
-    <section className="bg-[#F8F5F0] py-40 overflow-hidden">
+    <section className="bg-[#F8F5F0] py-24 md:py-32 lg:py-40 overflow-hidden">
 
-      <div className="w-full flex justify-center px-6">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
 
-        <div className="w-full max-w-7xl">
+        {/* Heading */}
 
-          {/* Heading */}
+        <div className="max-w-4xl mx-auto text-center mb-16 md:mb-24">
 
-          <div className="w-full flex justify-center mb-24">
+          <p className="uppercase tracking-[4px] sm:tracking-[8px] text-[#C9A227] font-semibold text-sm sm:text-base">
+            Testimonials
+          </p>
 
-            <div className="w-full max-w-4xl text-center">
+          <h2 className="mt-5 text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+            Loved by Travelers
+          </h2>
 
-              <p className="uppercase tracking-[8px] text-[#C9A227] font-semibold">
-                Testimonials
-              </p>
+          <p className="mt-6 text-base sm:text-lg lg:text-xl leading-8 text-gray-600 max-w-3xl mx-auto">
+            Every journey tells a story. Here are a few words from guests
+            who explored Africa with Esto Safari Dreams.
+          </p>
 
-              <h2 className="mt-6 text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
-                Loved by Travelers
-              </h2>
+        </div>
 
-              <p className="mt-8 text-xl leading-9 text-gray-600 max-w-3xl mx-auto">
-                Every journey tells a story. Here are a few words from guests
-                who explored Africa with Esto Safari Dreams.
-              </p>
+        {/* Cards */}
 
-            </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-10">
 
-          </div>
+          {testimonials.map((item, index) => (
 
-          {/* Cards */}
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.7,
+                delay: index * 0.15,
+              }}
+              whileHover={{
+                y: -10,
+                scale: 1.02,
+              }}
+              className="
+                group
+                bg-white
+                rounded-[2rem]
+                p-8
+                md:p-10
+                lg:p-12
+                shadow-xl
+                hover:shadow-2xl
+                transition-all
+                duration-500
+                flex
+                flex-col
+                items-center
+                text-center
+                min-h-[420px]
+                lg:min-h-[470px]
+                border
+                border-transparent
+                hover:border-[#C9A227]/40
+              "
+            >
 
-          <div className="grid gap-10 md:grid-cols-2 xl:grid-cols-3">
+              {/* Quote */}
 
-            {testimonials.map((item, index) => (
-
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.7,
-                  delay: index * 0.15,
-                }}
-                whileHover={{
-                  y: -12,
-                  scale: 1.02,
-                }}
-                className="
-                  bg-white
-                  rounded-[2rem]
-                  p-12
-                  shadow-xl
-                  transition-all
-                  duration-300
-                  text-center
-                  flex
-                  flex-col
-                  items-center
-                  min-h-[430px]
+              <div className="text-6xl md:text-7xl font-serif text-[#C9A227] leading-none">
                 "
-              >
+              </div>
 
-                <div className="text-7xl text-[#C9A227] leading-none">
-                  "
-                </div>
+              {/* Review */}
 
-                <p
+              <p className="mt-5 text-gray-600 italic text-sm md:text-base leading-7 md:leading-8 max-w-[320px]">
+                {item.review}
+              </p>
+
+              {/* Stars */}
+
+              <div className="flex gap-1 text-[#C9A227] mt-8 text-lg">
+
+                {[...Array(5)].map((_, i) => (
+                  <FaStar key={i} />
+                ))}
+
+              </div>
+
+              {/* Customer */}
+
+              <div className="mt-auto pt-10 flex flex-col items-center">
+
+                <img
+                  src={item.image}
+                  alt={item.name}
                   className="
-                    mt-6
-                    text-gray-600
-                    italic
-                    leading-8
-                    max-w-[300px]
+                    w-20
+                    h-20
+                    md:w-24
+                    md:h-24
+                    rounded-full
+                    object-cover
+                    border-4
+                    border-[#C9A227]
+                    shadow-lg
                   "
-                >
-                  {item.review}
+                />
+
+                <h4 className="mt-5 text-xl md:text-2xl font-bold text-gray-900">
+                  {item.name}
+                </h4>
+
+                <p className="mt-2 text-gray-500 text-sm md:text-base">
+                  {item.country}
                 </p>
 
-                <div className="flex justify-center text-[#C9A227] mt-8 gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <FaStar key={i} />
-                  ))}
-                </div>
+              </div>
 
-                <div className="mt-auto pt-10 flex flex-col items-center">
+            </motion.div>
 
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                    className="
-                      w-20
-                      h-20
-                      rounded-full
-                      object-cover
-                      border-2
-                      border-[#C9A227]
-                    "
-                  />
-
-                  <h4 className="mt-5 text-xl font-bold text-gray-900">
-                    {item.name}
-                  </h4>
-
-                  <p className="text-gray-500 mt-1">
-                    {item.country}
-                  </p>
-
-                </div>
-
-              </motion.div>
-
-            ))}
-
-          </div>
+          ))}
 
         </div>
 

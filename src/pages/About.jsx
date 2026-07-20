@@ -50,7 +50,7 @@ function About() {
       {/* Hero */}
 
       <section
-        className="relative h-[70vh] flex items-center justify-center text-white bg-cover bg-center"
+        className="relative min-h-[70vh] flex items-center justify-center text-white bg-cover bg-center px-6"
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1516026672322-bc52d61a55d5')",
@@ -62,19 +62,19 @@ function About() {
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9 }}
-          className="relative z-10 max-w-5xl mx-auto text-center px-6"
+          className="relative z-10 max-w-5xl mx-auto text-center"
         >
-          <p className="uppercase tracking-[8px] text-[#C9A227] font-semibold">
+          <p className="uppercase tracking-[4px] md:tracking-[8px] text-[#C9A227] font-semibold text-sm md:text-base">
             About Us
           </p>
 
-          <h1 className="text-5xl md:text-7xl font-bold mt-6">
+          <h1 className="mt-6 text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
             Discover The Heart
             <br />
             Of Esto Safari Dreams
           </h1>
 
-          <p className="mt-8 text-xl text-gray-200 leading-9 max-w-3xl mx-auto">
+          <p className="mt-8 text-base md:text-xl text-gray-200 leading-8 md:leading-9 max-w-3xl mx-auto">
             We don't simply organize safaris—we create extraordinary African
             experiences that inspire, connect, and leave lasting memories.
           </p>
@@ -83,9 +83,8 @@ function About() {
 
       {/* Our Story */}
 
-      <section className="py-32 bg-[#F8F5F0]">
-
-        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+      <section className="py-20 md:py-32 bg-[#F8F5F0]">
+        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
           <motion.img
             initial={{ opacity: 0, x: -80 }}
@@ -94,7 +93,7 @@ function About() {
             transition={{ duration: 0.8 }}
             src="https://images.unsplash.com/photo-1516426122078-c23e76319801"
             alt="Safari"
-            className="rounded-[2rem] shadow-2xl h-[550px] object-cover w-full"
+            className="rounded-[2rem] shadow-2xl h-[320px] md:h-[550px] object-cover w-full"
           />
 
           <motion.div
@@ -103,59 +102,56 @@ function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-
-            <p className="uppercase tracking-[8px] text-[#C9A227] font-semibold">
+            <p className="uppercase tracking-[4px] md:tracking-[8px] text-[#C9A227] font-semibold text-sm md:text-base">
               Our Story
             </p>
 
-            <h2 className="text-5xl font-bold mt-6 text-[#1B4332]">
+            <h2 className="mt-6 text-3xl md:text-5xl font-bold text-[#1B4332] leading-tight">
               Creating Memories Across Africa
             </h2>
 
-            <p className="mt-8 text-gray-700 leading-9 text-lg">
+            <p className="mt-8 text-gray-700 leading-8 md:leading-9 text-base md:text-lg">
               Esto Safari Dreams Ltd was founded with one goal—to showcase the
               breathtaking beauty of Africa through authentic, luxurious and
               unforgettable safari adventures.
             </p>
 
-            <p className="mt-6 text-gray-700 leading-9 text-lg">
+            <p className="mt-6 text-gray-700 leading-8 md:leading-9 text-base md:text-lg">
               From the plains of the Masai Mara and Serengeti to the beaches of
               Zanzibar and the mountain gorillas of Uganda and Rwanda, every
               journey is carefully designed around your dreams, comfort and
               expectations.
             </p>
 
-            <p className="mt-6 text-gray-700 leading-9 text-lg">
+            <p className="mt-6 text-gray-700 leading-8 md:leading-9 text-base md:text-lg">
               Our experienced team believes every traveler deserves a unique
               experience, combining wildlife, luxury accommodation, culture and
               personalized service from arrival to departure.
             </p>
-
           </motion.div>
 
         </div>
-
       </section>
 
       {/* Mission Vision Values */}
 
-      <section className="py-32 bg-[#081C15] text-white">
+      <section className="py-20 md:py-32 bg-[#081C15] text-white">
 
         <div className="max-w-7xl mx-auto px-6">
 
           <div className="text-center max-w-4xl mx-auto">
 
-            <p className="uppercase tracking-[8px] text-[#C9A227]">
+            <p className="uppercase tracking-[4px] md:tracking-[8px] text-[#C9A227]">
               What Drives Us
             </p>
 
-            <h2 className="text-5xl font-bold mt-6">
+            <h2 className="mt-6 text-3xl md:text-5xl font-bold">
               Excellence In Every Journey
             </h2>
 
           </div>
 
-          <div className="grid md:grid-cols-3 gap-10 mt-20">
+          <div className="grid md:grid-cols-3 gap-8 md:gap-10 mt-16 md:mt-20">
 
             {values.map((item, index) => (
 
@@ -166,14 +162,14 @@ function About() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.2 }}
                 whileHover={{ y: -10 }}
-                className="bg-white/10 backdrop-blur-lg rounded-[2rem] p-10 text-center border border-white/10"
+                className="bg-white/10 backdrop-blur-lg rounded-[2rem] p-8 md:p-10 text-center border border-white/10"
               >
 
-                <div className="w-20 h-20 mx-auto rounded-full bg-[#C9A227] text-black flex items-center justify-center text-3xl mb-8">
+                <div className="w-16 h-16 md:w-20 md:h-20 mx-auto rounded-full bg-[#C9A227] text-black flex items-center justify-center text-2xl md:text-3xl mb-6 md:mb-8">
                   {item.icon}
                 </div>
 
-                <h3 className="text-2xl font-bold mb-5">
+                <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-5">
                   {item.title}
                 </h3>
 
@@ -193,23 +189,23 @@ function About() {
 
       {/* Why Choose Us */}
 
-      <section className="py-32 bg-white">
+      <section className="py-20 md:py-32 bg-white">
 
         <div className="max-w-7xl mx-auto px-6">
 
           <div className="text-center max-w-4xl mx-auto">
 
-            <p className="uppercase tracking-[8px] text-[#C9A227]">
+            <p className="uppercase tracking-[4px] md:tracking-[8px] text-[#C9A227]">
               Why Choose Us
             </p>
 
-            <h2 className="text-5xl font-bold mt-6 text-[#1B4332]">
+            <h2 className="mt-6 text-3xl md:text-5xl font-bold text-[#1B4332]">
               The Esto Safari Difference
             </h2>
 
           </div>
 
-          <div className="grid md:grid-cols-3 gap-10 mt-20">
+          <div className="grid md:grid-cols-3 gap-8 md:gap-10 mt-16 md:mt-20">
 
             {reasons.map((item, index) => (
 
@@ -220,14 +216,14 @@ function About() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.15 }}
                 whileHover={{ y: -10 }}
-                className="bg-[#F8F5F0] rounded-[2rem] p-10 text-center shadow-lg"
+                className="bg-[#F8F5F0] rounded-[2rem] p-8 md:p-10 text-center shadow-lg"
               >
 
-                <div className="text-5xl text-[#C9A227] mb-8 flex justify-center">
+                <div className="text-4xl md:text-5xl text-[#C9A227] mb-6 md:mb-8 flex justify-center">
                   {item.icon}
                 </div>
 
-                <h3 className="text-2xl font-bold text-[#1B4332] mb-5">
+                <h3 className="text-xl md:text-2xl font-bold text-[#1B4332] mb-4 md:mb-5">
                   {item.title}
                 </h3>
 

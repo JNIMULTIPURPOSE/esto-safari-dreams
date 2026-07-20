@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-
+import logo  from "../assets/logo.png";
 
 function Navbar() {
 const [menuOpen, setMenuOpen] = useState(false);
@@ -14,15 +14,23 @@ const [menuOpen, setMenuOpen] = useState(false);
     {/* Logo */}
 
     <Link
-      to="/"
-      className="text-xl md:text-3xl font-bold text-white tracking-wide"
-    >
-      Esto <span className="text-[#C9A227]">Safari Dreams</span>
-    </Link>
+  to="/"
+  className="flex items-center gap-3"
+>
+  <img
+    src={logo}
+    alt="Esto Safari Dreams Logo"
+    className="h-22 w-auto object-contain"
+  />
+
+  <h1 className="text-xl md:text-4xl font-bold text-white tracking-wide">
+    ESTO <span className="text-[#C9A227]">SAFARI DREAMS LTD</span>
+  </h1>
+</Link>
 
     {/* Desktop Menu */}
 
-    <div className="hidden lg:flex items-center gap-8 text-white font-medium">
+    <div className="hidden lg:flex flex-1 justify-center items-center gap-8 text-white font-medium">
 
       <Link to="/" className="hover:text-[#C9A227] transition">
         Home
@@ -63,14 +71,15 @@ const [menuOpen, setMenuOpen] = useState(false);
 
     {/* Mobile Menu Button */}
 
-    <button
-      onClick={() => setMenuOpen(!menuOpen)}
-      className="lg:hidden text-white text-3xl"
-    >
-      {menuOpen ? <FaTimes /> : <FaBars />}
-    </button>
-
+    <div className="flex-1 flex justify-end lg:hidden">
+  <button
+    onClick={() => setMenuOpen(!menuOpen)}
+    className="text-white text-3xl"
+  >
+    {menuOpen ? <FaTimes /> : <FaBars />}
+  </button>
   </div>
+</div>
 
   {/* Mobile Menu */}
 
